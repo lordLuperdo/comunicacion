@@ -8,6 +8,7 @@ import maquina from '../assets/img/maquina_e.png'
 import microfono from '../assets/img/microfono.png'
 import radio from '../assets/img/radio.png'
 import telefono from '../assets/img/telefono.png'
+import logo from '../assets/img/poli_logo.png'
 
 
 const indice_imagen = ref(0)
@@ -25,16 +26,35 @@ setInterval(cambiar_imagen,400)
 </script>
 
 <template>
-  <main class="bg-[url('../assets/img/fondo.png')] h-[70vh] flex flex-col items-center ">
+   
+   
     
-    <div class="mt-10 mb-6 flex flex-col items-center gap-8">
+   <main class="bg-[url('../assets/img/fondo.png')] h-[80vh] flex flex-col items-center relative">
+
+  <div class="absolute left-0 max-w-[13vh] flex items-start mt-12 ml-3 z-0">
+    <img src="../assets/img/marco.png" alt="" class="max-h-full object-contain flex">
+  </div>
+  <div class="absolute w-[9vh] h-[60vh] right-0 z-0">
+    <img src="../assets/img/marco.png" alt="" class="max-h-full object-contain flex">
+  </div>
+    
+    <nav class="flex justify-between mt-10 z-10">
+      <div class="flex justify-center items-center max-w-20">
+        <img :src="logo" alt="" class="max_h_full max_w_full">
+      </div>
+      <div class="">
+        
+      </div>
+    </nav>
+
+    <div class="mt-10 mb-6 flex flex-col items-center gap-8 z-10">
       <div>
-      <img src="../assets/img/titulo.png" alt="titulo" class="max-w-[35vh]">
+      <img src="../assets/img/titulo.png" alt="titulo" class="max-w-[30vh]">
     </div>
-    <div class="w-[20vh] h-[20vh] flex items-center justify-center">
+    <div class="w-[15vh] h-[15vh] flex items-center justify-center">
       <img class="max-w-full max-h-full" :src="imagen" alt="imagen">
     </div>
-
+      
     </div>
     
       
@@ -42,7 +62,7 @@ setInterval(cambiar_imagen,400)
      Demuestra lo que aprendiste
    </p>
   </main>
-  <RouterLink to="/examen">comenzar</RouterLink>
-  {{ imagen }}
-  {{ indice_imagen }}
+  <div class="h-[20vh] bg-[url(../assets/img/colagge.png)] bg-cover flex items-center justify-center ">
+    <RouterLink to="/examen" class="text-4xl">comenzar</RouterLink></div>
+  
 </template>
