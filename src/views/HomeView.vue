@@ -29,16 +29,17 @@ setInterval(cambiar_imagen,400)
    
    
     
-   <main class="bg-[url('../assets/img/fondo.png')] h-[80vh] flex flex-col items-center relative">
+   <main class="principal   bg-[url('../assets/img/fondo.png')] h-[80vh] flex flex-col items-center relative">
 
-  <div class="absolute left-0 max-w-[13vh] flex items-start mt-12 ml-3 z-0">
+  <div class="imagen_izquierda     absolute left-0 max-w-[13vh] flex items-start mt-12 ml-5 z-0">
     <img src="../assets/img/marco.png" alt="" class="max-h-full object-contain flex">
   </div>
-  <div class="absolute w-[9vh] h-[60vh] right-0 z-0">
+
+  <div class="imagen_derecha     absolute right-0 max-w-[13vh] flex items-start mt-12 mr-5 z-0 espejo-x">
     <img src="../assets/img/marco.png" alt="" class="max-h-full object-contain flex">
   </div>
     
-    <nav class="flex justify-between mt-10 z-10">
+    <nav class="navegacion     flex justify-between mt-12 z-10">
       <div class="flex justify-center items-center max-w-20">
         <img :src="logo" alt="" class="max_h_full max_w_full">
       </div>
@@ -58,7 +59,7 @@ setInterval(cambiar_imagen,400)
     </div>
     
       
-   <p class="text-white">
+   <p class="text-white playfair-display">
      Demuestra lo que aprendiste
    </p>
   </main>
@@ -66,3 +67,4 @@ setInterval(cambiar_imagen,400)
     <RouterLink to="/examen" class="text-4xl">comenzar</RouterLink></div>
   
 </template>
+

@@ -5,8 +5,21 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      trasform:{
+        'espejo-x':'scaleX(-1)'
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.espejo-x': {
+          transform: 'scaleX(-1)',
+        },
+      }
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    },
+  ],
 }
 
