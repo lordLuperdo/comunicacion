@@ -32,9 +32,9 @@ const snapshot = await (collection(db,'quiz'))
           <p class="texto_progreso"></p>
         </div>
     </main>
-    <section class="regresar">
+    <section class="regresar mt-6">
       <button class="">regresar</button>
-      <RouterLink to="/resultado" class="">Terminar</RouterLink>
+      <RouterLink to="/resultado" class="text-white">Terminar</RouterLink>
     </section>
 </template>
 

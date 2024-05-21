@@ -1,10 +1,19 @@
 <script setup>
 import { ref } from 'vue';
 import logo from '../assets/img/poli_logo.png';
+import pyr from '../stores/pyr'
 
 import img1c from '../assets/img/collage/cortadas/imagen1.png'
 
-const num_p = ref(100);
+const active = ref(false)
+
+const cerrar= ()=>{
+  active.value=false
+}
+const abrir = ()=> {
+  active.value = true
+}
+const num_p = ref(15);
 </script>
 
 <template>
@@ -24,10 +33,27 @@ const num_p = ref(100);
     </div>
     <p class="porcentaje_numero text-white text-lg">{{ num_p }}%</p>
   </div>
-
-  <section class="flex items-center justify-center mt-7">
+  <section v-if="active===true" @click="cerrar" class="pop-up bg-black bg-opacity-90 flex flex-col items-center absolute z-50 top-0 h-[100vh] justify-center ">
+   <ul class="flex flex-col max-h-[58vh] max-w-[90%] gap-10 items-center  overflow-scroll  border-white border-4">
+    <li class="flex flex-col gap-3 mt-5" v-for="card in pyr" key="card">
+      <div class="flex">
+        <img :src="card.imagen" alt="" class="max-w-full max-h-full text-50">
+      </div>
+       <div class="">
+        <h1 class="text-white"><b>{{ card.pregunta }}</b></h1>
+       </div>
+       <div class="">
+        <p class="text-white">{{ card.respuesta }}</p>
+       </div>
+    </li>
+   </ul>
+   <div class="volver">
+    <button @click="cerrar">salir</button>
+   </div>
+  </section>
+  <section @click="abrir" class="flex items-center justify-center mt-7">
     <div class="collage relative overflow-hidden w-[40vh] min-h-[60vh] bg-black border-white border-4 rounded-sm bg-opacity-70">
-        <img :src="img1c" alt="infocracia" class="absolute bottom-0 max-w-[30vh] right-0 z-50 ">
+        <img :src="img1c" alt="infocracia" class="absolute bottom-0 max-w-[30vh] right-0 z-40 ">
         <img src="" alt="" class="absolute">
         <img src="" alt="" class="absolute">
         <img src="" alt="" class="absolute">
