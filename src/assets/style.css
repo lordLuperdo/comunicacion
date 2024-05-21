@@ -9,3 +9,9 @@
     font-optical-sizing: auto;
     font-style: normal;
   }
+
+  html{
+    background-image: url('../assets/img/fondo.png');
+    background-size:auto;
+    background-repeat: no-repeat;
+  }

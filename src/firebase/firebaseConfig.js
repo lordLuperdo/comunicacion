@@ -1,8 +1,9 @@
-
-import { initializeApp } from "firebase/app";
+// firebaseConfig.js
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
+  apiKey: "AIzaSyCDoXbKvHeLtVNsq2L06HRemdDQwGsd8j4",
   authDomain: "investigacion-creacion.firebaseapp.com",
   projectId: "investigacion-creacion",
   storageBucket: "investigacion-creacion.appspot.com",
@@ -10,5 +11,10 @@ const firebaseConfig = {
   appId: "1:598392003730:web:c870048d0aae8ecf735a4b"
 };
 
-// Initialize Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
+
+// Obtén una instancia de Firestore
+const db = getFirestore(app);
+
+export default{ db };
