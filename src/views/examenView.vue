@@ -5,7 +5,7 @@ import logo from '../assets/img/poli_logo.png';
 import { useQuizStore } from '@/stores/Quiz'
 import { db } from '@/firebase/firebaseConfig'
 
-
+holiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 const QuizStore = useQuizStore()
 const quiz_data = ref([])
 
