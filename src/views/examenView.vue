@@ -7,11 +7,6 @@ import { useQuizStore } from '@/stores/Quiz'
 const QuizStore = useQuizStore()
 const quiz_data = ref([])
 
-onMounted(async () => {
-  await QuizStore.getData(); // Aseguramos que llamamos getData correctamente
-  quiz_data.value = QuizStore.quiz_data; // Accedemos a quiz_data desde la tienda
-  console.log(quiz_data.value);
-});
 
 
 </script>

@@ -23,8 +23,7 @@ export const useQuizStore = defineStore('Quiz', () => {
   }
 
   async function getData() {
-    const { data : preguntas }= await supabase.from('preguntas').select()
-
+    const { data : quiz_data }= await supabase.from('preguntas').select()
   }
   
   return { increment_correct,increment_global,getData }
