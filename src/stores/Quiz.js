@@ -1,6 +1,10 @@
-import { ref} from 'vue'
+import {ref} from 'vue'
 import { defineStore } from 'pinia'
-import { db } from '@/firebase/firebaseConfig'
+import { supabase } from '@/supabase/supabaseconfig'
+
+
+import { querybycollection } from '@/firebase/fireStore'
+import { supabase } from '@/supabase/supabaseconfig'
 
 
 
@@ -8,6 +12,7 @@ import { db } from '@/firebase/firebaseConfig'
 export const useQuizStore = defineStore('Quiz', () => {
   const count_correctas = ref(0)
   const count_global = ref (0)
+  const quiz_data = ref([]);
 
   function increment_global() {
     count_global.value++
@@ -17,13 +22,8 @@ export const useQuizStore = defineStore('Quiz', () => {
     count_correctas.value++
   }
 
-  function getData(){
-    db.collection('quiz').get()
-    .then(res=>{
-      res.forEach(doc => {
-        console.log(doc.data())
-      })
-    })
+  async function getData() {
+    const { data : preguntas }= await supabase.from('preguntas').select()
 
   }
   

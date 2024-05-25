@@ -3,19 +3,16 @@ import { onMounted, ref } from 'vue';
 import logo from '../assets/img/poli_logo.png';
 
 import { useQuizStore } from '@/stores/Quiz'
-import { db } from '@/firebase/firebaseConfig'
 
-holiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
 const QuizStore = useQuizStore()
 const quiz_data = ref([])
 
-onMounted(()=>{
-  QuizStore.getData().then(data => {
-    quiz_data.value = data
-  }).catch(error => {
-    console.error('Error fetching quiz data:', error);
-  })
-})
+onMounted(async () => {
+  await QuizStore.getData(); // Aseguramos que llamamos getData correctamente
+  quiz_data.value = QuizStore.quiz_data; // Accedemos a quiz_data desde la tienda
+  console.log(quiz_data.value);
+});
+
 
 </script>
 <template>
