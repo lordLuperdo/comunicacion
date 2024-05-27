@@ -1,31 +1,40 @@
-import {ref} from 'vue'
-import { defineStore } from 'pinia'
-import { supabase } from '@/supabase/supabaseconfig'
-
-
-import { querybycollection } from '@/firebase/fireStore'
-import { supabase } from '@/supabase/supabaseconfig'
-
-
-
+import { ref } from 'vue';
+import { defineStore } from 'pinia';
+import { queryByCollection } from '@/supabase/supabase';
+import pyr from './pyr';
 
 export const useQuizStore = defineStore('Quiz', () => {
-  const count_correctas = ref(0)
-  const count_global = ref (0)
+  
+  const count_correctas = ref(0);
+  const count_global = ref(0);
   const quiz_data = ref([]);
+  const preguntas = pyr
+
 
   function increment_global() {
-    count_global.value++
+    count_global.value++;
   }
 
   function increment_correct() {
-    count_correctas.value++
+    count_global.value++;
+    console.log(count_global);
+  }
+  function decrement_global() {
+    count_global.value--;
+    console.log(count_global);
+  }
+
+
+  function porcentaje(total,){
+
+  }
+  function sumar_correctas(params) {
+    
   }
 
   async function getData() {
-    const { data : preguntas }= await supabase.from('preguntas').select()
-
+    quiz_data.value = await queryByCollection('total'); 
   }
-  
-  return { increment_correct,increment_global,getData }
-})
+
+  return {count_correctas,count_global, increment_correct,decrement_global, increment_global, getData, quiz_data, preguntas };
+});
