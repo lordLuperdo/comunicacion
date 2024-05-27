@@ -16,10 +16,12 @@ function end_quiz() {
 }
 
 onMounted(async () => {
-  await QuizStore.getData(); // Llamamos a getData para obtener los datos
-  quiz_data.value = QuizStore.quiz_data; // Asignamos los datos obtenidos a quiz_data
+  await QuizStore.getData(); // Aseguramos que llamamos getData correctamente
+  quiz_data.value = QuizStore.quiz_data; // Accedemos a quiz_data desde la tienda
   console.log(quiz_data.value);
 });
+
+
 </script>
 
 <template>
