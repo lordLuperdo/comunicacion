@@ -4,6 +4,7 @@ import logo from '../assets/img/poli_logo.png';
 import pyr from '../stores/pyr'
 
 import img1c from '../assets/img/collage/cortadas/imagen1.png'
+import img2c from '../assets/img/collage/cortadas/imagen2.png'
 
 const active = ref(false)
 
@@ -59,7 +60,7 @@ const num_p = ref(15);
   <section @click="abrir" class="flex items-center justify-center mt-7">
     <div class="collage relative overflow-hidden w-[40vh] min-h-[60vh] bg-black border-white border-4 rounded-sm bg-opacity-70">
         <img :src="img1c" alt="infocracia" class="absolute bottom-0 max-w-[30vh] right-0 z-40 ">
-        <img src="" alt="" class="absolute">
+        <img :src="img2c" alt="rtvc" class="absolute">
         <img src="" alt="" class="absolute">
         <img src="" alt="" class="absolute">
         <img src="" alt="" class="absolute">
