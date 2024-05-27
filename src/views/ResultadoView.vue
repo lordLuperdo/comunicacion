@@ -33,8 +33,12 @@ const num_p = ref(15);
     </div>
     <p class="porcentaje_numero text-white text-lg">{{ num_p }}%</p>
   </div>
+
+
   <section v-if="active===true" @click="cerrar" class="pop-up bg-black bg-opacity-90 flex flex-col items-center absolute z-50 top-0 h-[100vh] justify-center ">
-   <ul class="flex flex-col max-h-[58vh] max-w-[90%] gap-10 items-center  overflow-scroll  border-white border-4">
+   
+   
+    <ul class="flex flex-col max-h-[58vh] max-w-[90%] gap-10 items-center  overflow-scroll px-5 border-white border-4">
     <li class="flex flex-col gap-3 mt-5" v-for="card in pyr" key="card">
       <div class="flex">
         <img :src="card.imagen" alt="" class="max-w-full max-h-full text-50">
@@ -47,6 +51,7 @@ const num_p = ref(15);
        </div>
     </li>
    </ul>
+
    <div class="volver">
     <button @click="cerrar">salir</button>
    </div>
