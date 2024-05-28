@@ -50,7 +50,7 @@ console.log(quiz_data.value);
   </nav>
   <div class="audio flex justify-center">
     <audio controls 
-    src=""
+    :src=" QuizStore.preguntas[QuizStore.count_global].audio"
     class="max-w-[80vh]"
     ></audio>
   </div>

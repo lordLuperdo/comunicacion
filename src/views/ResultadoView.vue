@@ -28,7 +28,8 @@ const num_p = computed(() => QuizStore.porcentaje);
 </script>
 
 <template>
-  <nav class="navegacion flex items-center justify-center z-10 mt-9">
+  <main class="py-9">
+    <nav class="navegacion flex items-center justify-center z-10">
     <div class="flex max-w-20">
       <img :src="logo" alt="" class="max_h_full max_w_full">
     </div>
@@ -66,9 +67,10 @@ const num_p = computed(() => QuizStore.porcentaje);
       <img v-if="num_p >= 20" :src="img3c" alt="hallin" class="absolute">
       <img v-if="num_p >= 30" :src="img4c" alt="castellano" class="absolute">
       <img v-if="num_p >= 40" :src="img5c" alt="escultura" class="absolute top-28 right-20 z-20">
-      <img v-if="num_p >= 50" :src="img6c" alt="medios" class="absolute right-40 z-10">
+      <img v-if="num_p >= 60" :src="img6c" alt="medios" class="absolute right-[4rem] bottom-80 z-30 espejo-x">
     </div>
   </section>
+  </main>
 </template>
 
 <style scoped>
@@ -79,4 +81,11 @@ const num_p = computed(() => QuizStore.porcentaje);
 .progreso_porcentaje {
   transition: width 0.3s ease;
 }
+
+main{
+    background-image: url('../assets/img/fondo.png');
+    background-size:auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
 </style>
