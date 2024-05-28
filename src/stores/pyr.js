@@ -5,8 +5,12 @@ import img4 from "../assets/img/collage/enteras/imagen4e.png"
 import img5 from "../assets/img/collage/enteras/imagen5e.png"
 import img6 from "../assets/img/collage/enteras/imagen6e.png"
 
-
-
+import mp31 from "../assets/audio/em.mp3"
+import mp32 from "../assets/audio/mc.mp3"
+import mp33 from "../assets/audio/caste.mp3"
+import mp34 from "../assets/audio/em.mp3"
+import mp35 from "../assets/audio/ic.mp3"
+import mp36 from "../assets/audio/rtvc.mp3"
 
 const pyr = [
     {
@@ -16,9 +20,10 @@ const pyr = [
         'b) liberal, jerarquico y corporativo democrático',
         'C) cultura, liberal jerarquico y corporativo'
       ],
-      respuesta:"C) Infocracia, vigilancia digital, cultura de rendimiento, impacto de las redes sociales y resistencia y ética de la atención",
+      respuesta:"a) corporativo democrático,liberal y Pluralista",
       imagen:img2,
       imagen_c:"",
+      audio:mp32
     },
     
     {
@@ -31,6 +36,7 @@ const pyr = [
       respuesta:"C) Infocracia, vigilancia digital, cultura de rendimiento, impacto de las redes sociales y resistencia y ética de la atención",
       imagen:img1,
       imagen_c:"",
+      audio:""
     },
 
     {
@@ -43,6 +49,7 @@ const pyr = [
       respuesta:"a) 1200",
       imagen:img4,
      imagen_c:"",
+     audio:mp33
     },
     
     {
@@ -55,6 +62,7 @@ const pyr = [
       respuesta:"b) oral, imprenta, radio, digital",
       imagen:img5,
     imagen_c:"",
+    audio:mp34
     },
 
     {
@@ -67,6 +75,7 @@ const pyr = [
       respuesta:"a) Efímera, permanente y procesual",
       imagen:"",
       imagen_c:img5,
+      audio:mp35
     },
     {
       pregunta:"Qué significa RTVC?",
@@ -78,6 +87,7 @@ const pyr = [
       respuesta:"b) Radio Televisión Nacional de Colombia",
       imagen:img3,
       imagen_c:"",
+      audio: mp36
     },
     
     

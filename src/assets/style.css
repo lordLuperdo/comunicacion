@@ -12,6 +12,6 @@
 
   html{
     background-image: url('../assets/img/fondo.png');
-    background-size:auto;
+    background-size:cover;
     background-repeat: no-repeat;
   }
