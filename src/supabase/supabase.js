@@ -1,12 +1,12 @@
 import { supabase } from "./supabaseconfig";
 
-export const queryByCollection = async (table) => {
-    const { data, error } = await supabase
-      .from(table)
+export const queryByCollection = async () => {
+    const { data , error } = await supabase
+      .from('total')
       .select('*');
-  
+       console.log('data total',data)
     if (error) {
-      console.error('Error fetching data:', error);
+      console.error('Error con la ***** data:', error);
       return [];
     }
   
