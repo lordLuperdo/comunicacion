@@ -1,20 +1,28 @@
 import img1 from "../assets/img/collage/enteras/imagen1e.png"
+import img2 from "../assets/img/collage/enteras/imagen2e.png"
+import img3 from "../assets/img/collage/enteras/imagen3e.png"
+import img4 from "../assets/img/collage/enteras/imagen4e.png"
+import img5 from "../assets/img/collage/enteras/imagen5e.png"
+import img6 from "../assets/img/collage/enteras/imagen6e.png"
+
+
+
 
 const pyr = [
     {
-      pregunta:"Cuales son los sistemas mediaticos dr Hallin Y Mancín?",
+      pregunta:"¿Cuáles son los sistemas mediáticos de Hallin y Mancini?",
       opciones: [
         'a) corporativo democrático,liberal y Pluralista',
         'b) liberal, jerarquico y corporativo democrático',
         'C) cultura, liberal jerarquico y corporativo'
       ],
       respuesta:"C) Infocracia, vigilancia digital, cultura de rendimiento, impacto de las redes sociales y resistencia y ética de la atención",
-      imagen:img1,
-      imagen_cortada:''
+      imagen:img2,
+      imagen_c:"",
     },
     
     {
-      pregunta:"En el libro de Infocracia de Byung-Chul habla de los puntos importantes ya que el este trata del nuevo regimen al que estamos sometidos ¿Cuáles son? ",
+      pregunta:"¿Cuáles son los puntos importantes que aborda el libro 'Infocracia' de Byung-Chul Han, dado que trata sobre el nuevo régimen al que estamos sometidos?",
       opciones: [
         'a) estrutura de hans,vigilancia digital, cultura de rendimiento y ética de la atención ',
         'b) politico y liberal',
@@ -22,19 +30,19 @@ const pyr = [
       ],
       respuesta:"C) Infocracia, vigilancia digital, cultura de rendimiento, impacto de las redes sociales y resistencia y ética de la atención",
       imagen:img1,
-      imagen_cortada:''
+      imagen_c:"",
     },
 
     {
       pregunta:"¿Cúando se creó la lengua castellana?",
       opciones: [
         'a) 1200',
-        'b) 1200',
-        'C) 1200'
+        'b) 1250',
+        'C) 1300'
       ],
       respuesta:"a) 1200",
-      imagen:"",
-      imagen_cortada:''
+      imagen:img4,
+     imagen_c:"",
     },
     
     {
@@ -45,8 +53,8 @@ const pyr = [
         'C) oral, imprenta, radio, tv, digital'
       ],
       respuesta:"b) oral, imprenta, radio, digital",
-      imagen:"",
-      imagen_cortada:''
+      imagen:img5,
+    imagen_c:"",
     },
 
     {
@@ -58,7 +66,18 @@ const pyr = [
       ],
       respuesta:"a) Efímera, permanente y procesual",
       imagen:"",
-      imagen_cortada:''
+      imagen_c:img5,
+    },
+    {
+      pregunta:"Qué significa RTVC?",
+      opciones: [
+        'a) Radio Televisión Nacional',
+        'b) Radio Televisión Nacional de Colombia',
+        'C) Radio Televisión colombia'
+      ],
+      respuesta:"b) Radio Televisión Nacional de Colombia",
+      imagen:img3,
+      imagen_c:"",
     },
     
     
